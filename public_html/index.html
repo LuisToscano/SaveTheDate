@@ -9,22 +9,77 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
         <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="js/count_to_date.js" type="text/javascript"></script>
     </head>
     <body>
         <header>
-           <div class="menucontainer">
+           <div id="menucontainer">
+                <div class="spacer"></div>
                 <div class="menu">
                     <div>INICIO</div>
                     <div>LA FIESTA</div>
                     <div>NUESTRAS FOTOS</div>
                     <div>CONFIRMA QUE VIENES</div>
                 </div>
+                <div class="spacer"></div>
            </div>
         </header>
-        <div class="content">
-            <div class="couple">
-            
+        <div id="content">
+            <div class="titulo"><span>¡NOS CASAMOS!</span></div> 
+            <div id="contenido">
+                <div class="spacer"></div>
+                <div class="spacer"></div>
+                <div id="couple">
+                    <div class="about_them bride">
+                        <div class="aboutContainer">
+                            <div class="image_container">
+                                <img src="img/girl.jpg">
+                            </div>
+                            <div class="nombre">
+                                Silvia Maria Toscano
+                            </div>
+                            <div class="about">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="couple_middle">
+                        <div class="xAnd">&</div>
+                        <div id="countdown">
+                            <div>
+                                <p class="days">00</p>
+                                <p class="timeRefDays">días</p>
+                                <p class="hours">00</p>
+                                <p class="timeRefHours">horas</p>
+                            </div>
+                            <div>
+                                <p class="minutes">00</p>
+                                <p class="timeRefMinutes">minutos</p>
+                                <p class="seconds">00</p>
+                                <p class="timeRefSeconds">segundos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about_them groom">
+                        <div class="aboutContainer">
+                            <div class="image_container">
+                                <img src="img/boy.jpg">
+                            </div>
+                            <div class="nombre">
+                                Ruben Darío García
+                            </div>
+                            <div class="about">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="spacer"></div>
             </div>
         </div>
     </body>
