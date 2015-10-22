@@ -59,7 +59,7 @@
     futureFormattedDate = mm + "/" + dd + "/" + y;
     return futureFormattedDate
   }
-  $("#countdown").countdown({
+  $("div[id^='countdown']").countdown({
     date: "30 January 2016 09:00:00", 
     format: "on"
   });

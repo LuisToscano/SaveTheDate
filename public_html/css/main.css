@@ -13,20 +13,26 @@ html{
 }
 
 body{
-    margin: 0px;
     font-family: 'Open Sans', sans-serif;
-    //background-color: rgb(191,132,51);
+    margin: 0px;
+}
+
+.about_them{
+    margin: 0px;
+    background-color: rgba(255,243,188,0.8);
+    padding-top: 1.5rem; 
+    padding-bottom: 1.5rem; 
 }
 
 header{
-    height: 40rem;
+    height: 20rem;
     background: url('../img/portada.jpg') no-repeat fixed center;
     background-size: 100%; 
 }
 
 header #menucontainer{
     width: 100%;
-    height: 10rem;
+    height: 8rem;
     background-color: rgba(255,243,188,0.8);
     display: flex;
     flex-direction: row;
@@ -56,21 +62,67 @@ header #menucontainer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 30rem;
 }
 
 #content .titulo{
-    width: 100%;
+    width: 80%;
+    border-radius: 20%;
     text-align: center;
     font-size: 5rem;
-    margin-top:-3rem;
+    margin-top: -4rem;
     color: white;
     font-weight: bold;
 }
 
-#content .titulo span{
-    border-radius: 20%;
+#content .titulo div{
+    width: 50%;
+    border-radius: 25px;
+    border:0;
+    margin: 0 auto;
     background: #EB9F17;
-    padding: 2rem;
+    padding: 5px;
+}
+
+#content .titulo div span{
+    overflow: visible;
+    border-radius: 10%;
+}
+
+#content #contenido{
+    height: 100%;
+    margin: 2rem;
+}
+
+#content #couple_content{
+    display: flex;
+    flex-direction:column;
+    height: 100%;
+}
+
+#content #couple_content .sub_countdown #countdown2{
+  flex-grow:1;
+  height: 50%;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  display:none;
+}
+
+#content #couple_content .sub_countdown #countdown2 p {
+    display: inline-block;
+    color: #FFA500;
+    font-size: 2rem;
+    color: gray;
+    margin: 0px;
+}
+
+#content #couple_content .sub_countdown #countdown2 p:nth-child(even) {
+    padding-right: 1rem;
+    padding-left: 0.2rem;
+    font-weight: bold;
 }
 
 #content #couple{
@@ -78,14 +130,15 @@ header #menucontainer{
     flex-grow: 3;
     display: flex;
     flex-direction:row;
+    height: 100%;
 }
 
 #content #couple .about_them{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
     flex-grow:1;
+    height: 100%;
 }
 
 #content #couple .bride{
@@ -100,21 +153,32 @@ header #menucontainer{
     display: flex;
     flex-direction: column;
     align-items:center;
-    height: 400px;
+    height: 100%;
     order: 2;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 #content #couple .couple_middle #countdown {
   flex-grow:1;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #content #couple .couple_middle #countdown div p {
-  display: inline-block;
-  color: #FFA500;
-  font-size: 2.3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  color: gray;
+    display: inline-block;
+    color: #FFA500;
+    font-size: 2rem;
+    color: gray;
+    margin: 0px;
+}
+
+#content #couple .couple_middle #countdown div :nth-child(even) {
+    padding-right: 1rem;
+    padding-left: 0.2rem;
+    font-weight: bold;
 }
 
 #content #couple .couple_middle .xAnd{
@@ -125,26 +189,28 @@ header #menucontainer{
     color: #C48513;
     flex-grow: 2;
     font-family: 'Playfair Display', serif;
+    height: 50%;
 }
 
 #content #couple .about_them .aboutContainer{
-    //border-radius: 30%;
+    border-radius: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    width:300px;
-    height: 400px;
+    width:30rem;
+    height: 100%;
 }
 
 #content #couple .about_them .aboutContainer .image_container{
-   border-radius: 100%;
    overflow: hidden;
+   height: 50%;
+   width: 100%;
 }
 
 #content #couple .about_them .aboutContainer .image_container img{
-   height: 20rem;
-   width: 20rem;
+   height: 12rem;
+   width: 12rem;
+   border-radius: 100%;
 }
 
 #content #couple .about_them .aboutContainer .nombre{
@@ -169,6 +235,59 @@ header #menucontainer{
     font-size: 1.2rem;
 }
 
-@media (max-width: 850px) {
-  
+#content #party.invisible{
+    display:none;
+}
+
+#content #party.invisible{
+    display:none;
+}
+
+#content #party{
+    text-align: center;
+    flex-grow: 3;
+    display: flex;
+    flex-direction:row;
+    height: 100%;
+}
+
+@media (max-width: 1085px) {
+    
+    #content .titulo div{
+        width: 60%;
+    }
+    
+    #content #couple .couple_middle #countdown {
+        flex-direction: column;
+    }
+    
+    #content #couple .couple_middle #countdown div{
+        flex-direction: column;
+        padding-top: 2.5rem;
+    }
+}
+
+@media (max-width: 945px) {
+    
+    #content #couple_content .sub_countdown #countdown2{
+        display:flex;
+    }
+    
+    #content .titulo div{
+        width: 60%;
+    }
+
+    #content #couple .couple_middle {
+        flex-direction: row;
+    }
+    
+    #content #couple .couple_middle #countdown div {
+        display: none;
+        height:0px;
+    }
+    
+    #content #couple .couple_middle .xAnd{
+        height: 100%;
+        font-size: 10rem;
+    }
 }
