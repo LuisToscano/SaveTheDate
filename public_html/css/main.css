@@ -43,6 +43,49 @@ header #menucontainer{
     flex-grow: 1;
 }
 
+#responsiveMenuContainer{
+    display: none;
+    width: 100%;
+    height: 8rem;
+    background-color: rgba(255,243,188,0.8);
+}
+
+#responsiveMenuContainer .menuicon{
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 3rem;
+    padding-left: 3rem;
+    color: gray;
+}
+
+#responsiveMenuContainer .menuicon:hover{
+    cursor:pointer;
+}
+
+ul.responsiveMenu{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: none;
+}
+
+ul.responsiveMenu li{
+    color: gray;
+    font-size: 3rem;
+    background-color: lightgray;
+    text-align: center;
+    padding: 1rem;
+}
+
+ul.responsiveMenu li:hover{
+    cursor: pointer;
+    color: lightgray;
+    background-color: gray;
+}
+
 #menucontainer .menu{
     text-align: center;
     flex-grow: 5;
@@ -57,12 +100,18 @@ header #menucontainer{
     color: gray;
 }
 
+#menucontainer .menu div:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 #content{
-    width:100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 30rem;
+    margin: 0 auto;
 }
 
 #content .titulo{
@@ -92,26 +141,34 @@ header #menucontainer{
 #content #contenido{
     height: 100%;
     margin: 2rem;
+    width: 100%;
 }
 
-#content #couple_content{
+/*---------------------------------------------- COUPLE ---------------------------------------------*/
+
+#content .couple_content{
     display: flex;
     flex-direction:column;
     height: 100%;
 }
 
-#content #couple_content .sub_countdown #countdown2{
+#content .couple_content .sub_countdown{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#content .couple_content .sub_countdown #countdown2{
   flex-grow:1;
   height: 50%;
   flex-direction: row;
   align-items: center;
-  width: 50%;
-  margin: 0 auto;
   padding-bottom: 10px;
   display:none;
 }
 
-#content #couple_content .sub_countdown #countdown2 p {
+#content .couple_content .sub_countdown #countdown2 p {
     display: inline-block;
     color: #FFA500;
     font-size: 2rem;
@@ -119,7 +176,7 @@ header #menucontainer{
     margin: 0px;
 }
 
-#content #couple_content .sub_countdown #countdown2 p:nth-child(even) {
+#content .couple_content .sub_countdown #countdown2 p:nth-child(even) {
     padding-right: 1rem;
     padding-left: 0.2rem;
     font-weight: bold;
@@ -235,23 +292,140 @@ header #menucontainer{
     font-size: 1.2rem;
 }
 
-#content #party.invisible{
-    display:none;
-}
+/*---------------------------------------------- PARTY ---------------------------------------------*/
 
-#content #party.invisible{
-    display:none;
-}
-
-#content #party{
-    text-align: center;
-    flex-grow: 3;
-    display: flex;
-    flex-direction:row;
+#content .party_content{
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
+#content .party{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    color: gray;
+    flex-grow: 5;
+}
+
+#content .party > div{
+    flex-grow: 1;
+    width: 33.3%;
+}
+
+#content .party .about_party{
+    flex-grow:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 0px;
+}
+
+#content .party .middle_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
+}
+
+#content .party .middle_container div{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+#content .party .middle_container .icono{
+    color: #C48513;
+    font-size: 10rem;
+}
+
+#content .party .middle_container .mensaje{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+#content .party .middle_container .ciudad{
+    font-size: 1.2rem;
+}
+
+#content .party .middle_container div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#content .party .about_party .title{
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    color: #C48513;
+    border-bottom: solid 3px #C48513;
+}
+
+#content .party .about_party > div{
+    background-color: rgba(255,243,188,0.8);
+    padding: 2rem;
+}
+
+#content .party .about_party ul{
+    font-size: 2rem;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#content .party .about_party ul li{
+    padding-top: 1rem;
+}
+
+#content .party .about_party ul span{
+    font-weight: bold;
+    color: #C48513;
+}
+
+#content .party_specs{
+    text-align: center;
+    color: #C48513;
+    font-size: 2.5rem;
+    padding-top: 1rem;
+    flex-grow: 1;
+}
+
+#content .party_specs span{
+    color: gray;
+    font-weight: bold;
+}
+
+#content .party_specs i{
+    margin-right: 1rem; 
+}
+
+#content .party_specs i{
+    margin-left: 3rem; 
+}
+
+/*---------------------------------------------- MEDIA QUERIES ---------------------------------------------*/
+
+/*---------------------------------------------- MAIN PAGE ---------------------------------------------*/
 
 @media (max-width: 1085px) {
+    
+    header{
+        height: auto;
+    }
+    
+    #content .titulo {
+        margin: 0px;
+        padding-top: 2rem;
+    }
     
     #content .titulo div{
         width: 60%;
@@ -269,7 +443,7 @@ header #menucontainer{
 
 @media (max-width: 945px) {
     
-    #content #couple_content .sub_countdown #countdown2{
+    #content .couple_content .sub_countdown #countdown2{
         display:flex;
     }
     
@@ -289,5 +463,122 @@ header #menucontainer{
     #content #couple .couple_middle .xAnd{
         height: 100%;
         font-size: 10rem;
+    }
+}
+
+@media (max-width: 790px) {
+    
+    #content .titulo div{
+        width: 80%;
+    }
+    
+}
+
+@media (max-width: 730px) {
+    
+    #content #couple{
+        flex-direction:column;
+    }
+    
+    #content #couple .about_them{
+        width: 100%;
+    }
+    
+    #content #couple .about_them .aboutContainer{
+        width: 100%;
+    }
+    
+    #content #couple .couple_middle .xAnd{
+        width: 100%;
+        flex-direction: column;
+        height:auto;
+    }
+}
+
+@media (max-width: 610px) {
+    
+        #content .titulo div{
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    
+    header #menucontainer{
+        display: none;
+    }
+    
+    #responsiveMenuContainer{
+        display: flex;
+    }
+}
+
+@media (max-width: 465px) {
+    #content .couple_content .sub_countdown #countdown2{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+    #content{
+    width: 100%;
+  }
+}
+
+
+/*---------------------------------------------- PARTY ---------------------------------------------*/
+
+@media (max-width: 1550px) {
+    #content .party{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1200px) {
+    #content .party{
+        width: 100%;
+    }
+}
+
+@media (max-width: 890px) {
+    
+    #content .party_content{
+        height: auto;
+    }
+    
+    #content .party{
+        flex-direction: column;
+        height: auto;
+    }
+    
+    #content .party .about_party{
+        width: 100%;
+    }
+    
+    #content .party .middle_container{
+        width: 100%;
+    }
+    
+    #content .party .about_party > div{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 720px) {
+    
+    #content .party_specs span{
+        display: block;
+    }
+}
+
+@media (max-width: 535px) {
+    
+    #content .party_specs i{
+        display: block;
+        font-size: 5rem;
+        margin: 0px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 }
