@@ -45,5 +45,11 @@ $("document").ready(function(){
        $("div[id='tab"+numid+"']").fadeIn(500);
     });
   
+    $("#tab1").hide();
+    $("#tab3").hide();
+    
+    $(".party_specs p").click(function(){
+       window.open("https://www.google.es/maps/place/Ruitoque+Golf+Country+Club/@7.0253055,-73.0846194,16z/data=!4m2!3m1!1s0x8e684759f471ff0f:0x1ecbf46fa03bcdf6");
+    });
 });
 
