@@ -43,6 +43,10 @@ header #menucontainer{
     flex-grow: 1;
 }
 
+div[id^=tab]{
+    display: none;
+}
+
 #responsiveMenuContainer{
     display: none;
     width: 100%;
@@ -147,7 +151,6 @@ ul.responsiveMenu li:hover{
 /*---------------------------------------------- COUPLE ---------------------------------------------*/
 
 #content .couple_content{
-    display: flex;
     flex-direction:column;
     height: 100%;
 }
@@ -260,13 +263,12 @@ ul.responsiveMenu li:hover{
 
 #content #couple .about_them .aboutContainer .image_container{
    overflow: hidden;
-   height: 50%;
+   height: 70%;
    width: 100%;
 }
 
 #content #couple .about_them .aboutContainer .image_container img{
-   height: 12rem;
-   width: 12rem;
+   width: 150px;
    border-radius: 100%;
 }
 
@@ -296,7 +298,6 @@ ul.responsiveMenu li:hover{
 
 #content .party_content{
     height: 100%;
-    display: flex;
     flex-direction: column;
 }
 
@@ -349,7 +350,7 @@ ul.responsiveMenu li:hover{
 }
 
 #content .party .middle_container .ciudad{
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
 
 #content .party .middle_container div{
@@ -411,13 +412,40 @@ ul.responsiveMenu li:hover{
 }
 
 #content .party_specs p{
-    color: lightgray; 
+    color: #B0B0B0; 
 }
 
 #content .party_specs p:hover{
     color: gray; 
     text-decoration: underline;
     cursor: pointer;
+}
+
+/*---------------------------------------------- GALLERY ---------------------------------------------*/
+
+div.gallery{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+div.gallery .gallery_row{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+div.gallery .gallery_row .gallery_image{
+  display: flex; 
+  width: 25%;
+  max-height: 200px;
+  overflow: hidden;
+  border: 8px solid rgb(255,243,188);
+}
+
+div.gallery .gallery_row .gallery_image img{
+  max-width: 100%;
+  image-orientation: from-image;
 }
 
 /*---------------------------------------------- CONTACT ---------------------------------------------*/
